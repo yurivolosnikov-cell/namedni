@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Намедни по-турецки — Феномены по годам</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=PT+Sans:wght@400;700&display=swap');
+
+    :root {
+      --dark-blue: #070c24;
+      --dark-red: #800c14;
+      --gold: #b8860b;
+      --text-color: #1a1a1a;
+      --link-color: #1a548c;
+      --bullet-color: #999999;
+      --bg-cream: #faf9f6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: var(--text-color);
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ======= HEADER GRADIENT WITH COLLAGE ======= */
+    header {
+      background: linear-gradient(135deg, rgba(7, 12, 36, 0.88) 0%, rgba(74, 13, 21, 0.8) 60%, rgba(128, 12, 20, 0.88) 100%), url('turkish_collage.png') no-repeat center center;
+      background-size: cover;
+      color: #ffffff;
+      padding: 30px 40px 0 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      max-width: 1250px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .header-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-title-block {
+      margin-bottom: 25px;
+    }
+
+    .header-title {
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    .header-subtitle {
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+
+    /* ======= HEADER NAVIGATION ======= */
+    nav.header-nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-item {
+      color: #d8c2c8;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-bottom-color 0.2s;
+    }
+
+    .nav-item:hover {
+      color: #ffffff;
+    }
+
+    .nav-item.active {
+      color: #ffffff;
+      border-bottom-color: #ffffff;
+    }
+
+    /* ======= Stylized NTV Flower Logo Badge ======= */
+    .ntv-badge-container {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      margin-bottom: 15px;
+    }
+
+    .ntv-badge {
+      width: 44px;
+      height: 44px;
+      background-color: #1a1a1a;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border: 1px solid #333;
+      transition: transform 0.2s ease;
+    }
+
+    .ntv-badge:hover {
+      transform: scale(1.08);
+    }
+
+    /* Beautiful CSS NTV spoked asterisk */
+    .ntv-asterisk {
+      color: #a3cc29;
+      /* Lime green / yellow NTV flower color */
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1;
+      font-family: 'PT Sans', sans-serif;
+      cursor: default;
+    }
+
+    /* ======= MAIN CONTAINER ======= */
+    main {
+      max-width: 1250px;
+      margin: 40px auto 80px;
+      padding: 0 40px;
+    }
+
+    .page-title {
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    /* ======= YEARS GRID ======= */
+    .years-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+      row-gap: 35px;
+    }
+
+    .year-block {
+      display: flex;
+      align-items: flex-start;
+      padding: 5px 0;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      border-radius: 4px;
+    }
+
+    .year-block:hover {
+      background-color: #f7f9fc;
+      transform: translateX(5px);
+    }
+
+    /* Rotated Year text */
+    .year-label {
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--link-color);
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      line-height: 1;
+      padding-top: 2px;
+      margin-right: 18px;
+      flex-shrink: 0;
+      user-select: none;
+      transition: color 0.2s ease;
+    }
+
+    .year-block:hover .year-label {
+      color: #e02424;
+      /* Red highlight on hover matching Namedni theme */
+    }
+
+    /* Phenomena text list */
+    .phenomena-list {
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333333;
+      padding-top: 2px;
+    }
+
+    .phenomena-list a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.15s, border-bottom 0.15s;
+      border-bottom: 1px solid transparent;
+    }
+
+    .phenomena-list a:hover {
+      color: #0b2e59;
+      border-bottom-color: #0b2e59;
+    }
+
+    .bullet {
+      color: var(--bullet-color);
+      margin: 0 4px;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    /* ======= FOOTER ======= */
+    footer {
+      background-color: #111111;
+      color: #777777;
+      text-align: center;
+      padding: 30px 40px;
+      font-size: 12px;
+      border-top: 1px solid #222;
+    }
+
+    footer a {
+      color: #999999;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* ======= RESPONSIVE DESIGN ======= */
+    @media (max-width: 900px) {
+      .years-grid {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+      }
+
+      header {
+        padding: 20px 20px 0 20px;
+      }
+
+      main {
+        padding: 0 20px;
+        margin: 30px auto 60px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .header-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .ntv-badge-container {
+        align-self: flex-start;
+        margin-bottom: 10px;
+      }
+
+      nav.header-nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .nav-item {
+        font-size: 12px;
+        padding-bottom: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="header-left">
+        <div class="header-title-block">
+          <h2 class="header-title">Намедни по-турецки</h2>
+          <div class="header-subtitle">Проект, вдохновленный Л.Парфеновым</div>
+        </div>
+        <nav class="header-nav">
+          <a href="index.html" class="nav-item active">Феномены по годам</a>
+          <a href="companies.html" class="nav-item">30 крупнейших компаний Турции</a>
+          <a href="rich_families.html" class="nav-item">30 самых богатых людей и семей Турции</a>
+          <a href="actors.html" class="nav-item">Список турецких актеров</a>
+        </nav>
+      </div>
+      <div class="ntv-badge-container">
+        <div class="ntv-badge" title="Намедни / НТВ">
+          <span class="ntv-asterisk">✳</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Феномены по годам</h1>
+
+    <div class="years-grid">
+    
+<div class="year-block">
+        <div class="year-label">1942</div>
+        <div class="phenomena-list">
+          <a href="1942.html#ekmek">Хлебные карточки</a> <span class="bullet">•</span> <a href="1942.html#varlik">Варлык
+            Вергиси</a> <span class="bullet">•</span> <a href="1942.html#krom">Хром для Круппа</a> <span
+            class="bullet">•</span> <a href="1942.html#muzik">Четыре голоса золотого века</a> <span
+            class="bullet">•</span> <a href="1942.html#deprem">Землетрясение в Никсаре</a> <span class="bullet">•</span>
+          <a href="1942.html#struma">«Струма»: 769 погибших</a> <span class="bullet">•</span> <a
+            href="1942.html#anadolu">Чистка в агентстве «Анадолу»</a> <span class="bullet">•</span> <a
+            href="1942.html#rozet">Розет Авигдор</a> <span class="bullet">•</span> <a
+            href="1942.html#muzaffer">Профессор Музаффер Шериф</a> <span class="bullet">•</span> <a
+            href="1942.html#eczacibasi">Аптека — будущий холдинг</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1980</div>
+        <div class="phenomena-list">
+          <a href="1980.html#24-января">24 января</a> <span class="bullet">•</span> <a href="1980.html#12-сентября">12 сентября</a> <span class="bullet">•</span> <a href="1980.html#жертвы">Жертвы</a> <span class="bullet">•</span> <a href="1980.html#фатса">Фатса</a> <span class="bullet">•</span> <a href="1980.html#бюлент-эрсой">Бюлент Эрсой</a> <span class="bullet">•</span> <a href="1980.html#даллас">Даллас</a> <span class="bullet">•</span> <a href="1980.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1980.html#йешильчам-последние-годы-народного-кино">Йешильчам: последние годы народного кино</a> <span class="bullet">•</span> <a href="1980.html#кыраатхане-мужской-мир">Кыраатхане: мужской мир</a> <span class="bullet">•</span> <a href="1980.html#убийство-леннона">УБИЙСТВО ЛЕННОНА</a> <span class="bullet">•</span> <a href="1980.html#очереди-за-бензином">ОЧЕРЕДИ ЗА БЕНЗИНОМ</a> <span class="bullet">•</span> <a href="1980.html#шахлары-да-вурурлар">ШАХЛАРЫ ДА ВУРУРЛАР</a> <span class="bullet">•</span> <a href="1980.html#таверна">ТАВЕРНА</a> <span class="bullet">•</span> <a href="1980.html#хиссели-харикалар-кумпаньясы">ХИССЕЛИ ХАРИКАЛАР КУМПАНЬЯСЫ</a> <span class="bullet">•</span> <a href="1980.html#барыш-манчо-дёненче">БАРЫШ МАНЧО: «ДЁНЕНЧЕ»</a> <span class="bullet">•</span> <a href="1980.html#хардал">ХАРДАЛ</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1981</div>
+        <div class="phenomena-list">
+          <a href="1981.html#агджа">Агджа</a> <span class="bullet">•</span> <a href="1981.html#мюнир-нуреттин-селчук">Мюнир Нуреттин Селчук</a> <span class="bullet">•</span> <a href="1981.html#йёк">Йёк</a> <span class="bullet">•</span> <a href="1981.html#тишина">Тишина</a> <span class="bullet">•</span> <a href="1981.html#угон">Угон</a> <span class="bullet">•</span> <a href="1981.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1981.html#walkman">Walkman</a> <span class="bullet">•</span> <a href="1981.html#12-dev-adam">12 Dev Adam</a> <span class="bullet">•</span> <a href="1981.html#музыка-молчащей-страны">Музыка молчащей страны</a> <span class="bullet">•</span> <a href="1981.html#галина">Галина</a> <span class="bullet">•</span> <a href="1981.html#дефицит-экономика-очереди">Дефицит: экономика очереди</a> <span class="bullet">•</span> <a href="1981.html#мамак">МАМАК</a> <span class="bullet">•</span> <a href="1981.html#eye-of-the-tiger">EYE OF THE TIGER</a> <span class="bullet">•</span> <a href="1981.html#хиссетти-хэрэт">ХИССЕТТИ ХЭРЭТ</a> <span class="bullet">•</span> <a href="1981.html#ra-анатолийский-рок-под-запретом">RA: АНАТОЛИЙСКИЙ РОК ПОД ЗАПРЕТОМ</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1982</div>
+        <div class="phenomena-list">
+          <a href="1982.html#йылмаз-гюней-и-йол">Йылмаз Гюней и «Йол»</a> <span class="bullet">•</span> <a href="1982.html#банкер-кастелли">Банкер Кастелли</a> <span class="bullet">•</span> <a href="1982.html#асала">Асала</a> <span class="bullet">•</span> <a href="1982.html#конституция-и-эврен">Конституция и Эврен</a> <span class="bullet">•</span> <a href="1982.html#бюлент-эрсой-судебный-приговор">Бюлент Эрсой: судебный приговор</a> <span class="bullet">•</span> <a href="1982.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1982.html#зеки-мюрен-голос-вне-правил">Зеки Мюрен: голос вне правил</a> <span class="bullet">•</span> <a href="1982.html#компьютер">КОМПЬЮТЕР</a> <span class="bullet">•</span> <a href="1982.html#книжная-ярмарка-тюяп">КНИЖНАЯ ЯРМАРКА ТЮЯП</a> <span class="bullet">•</span> <a href="1982.html#референдум-914">РЕФЕРЕНДУМ: 91,4%</a> <span class="bullet">•</span> <a href="1982.html#стамбульский-кинофестиваль">СТАМБУЛЬСКИЙ КИНОФЕСТИВАЛЬ</a> <span class="bullet">•</span> <a href="1982.html#мастика-цыганская-музыка-выходит-на-свет">«МАСТИКА»: ЦЫГАНСКАЯ МУЗЫКА ВЫХОДИТ НА СВЕТ</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1983</div>
+        <div class="phenomena-list">
+          <a href="1983.html#анап-и-возвращение-к-гражданской-власти">АНАП и возвращение к гражданской власти</a> <span class="bullet">•</span> <a href="1983.html#кктц-остров-разрезан-навсегда">ККТЦ: остров разрезан навсегда</a> <span class="bullet">•</span> <a href="1983.html#асала-в-орли">АСАЛА в Орли</a> <span class="bullet">•</span> <a href="1983.html#землетрясение-в-эрзуруме">Землетрясение в Эрзуруме</a> <span class="bullet">•</span> <a href="1983.html#неджип-фазыл-кысакюрек">Неджип Фазыл Кысакюрек</a> <span class="bullet">•</span> <a href="1983.html#три-пять-человек-адалет-агаоглу">«Три-пять человек» — Адалет Агаоглу</a> <span class="bullet">•</span> <a href="1983.html#et-в-турецком-кинотеатре">E.T. в турецком кинотеатре</a> <span class="bullet">•</span> <a href="1983.html#фери-джансел">Фери Джансел</a> <span class="bullet">•</span> <a href="1983.html#евровидение-опера-и-последнее-место">Евровидение: «Опера» и последнее место</a> <span class="bullet">•</span> <a href="1983.html#я-выживу-глория-гейнор-в-стамбуле">«Я выживу»: Глория Гейнор в Стамбуле</a> <span class="bullet">•</span> <a href="1983.html#арабеск-спор-о-звуке">Арабеск: спор о звуке</a> <span class="bullet">•</span> <a href="1983.html#стюдио-фм-первое-частное-радио">Стюдио ФМ: первое частное радио</a> <span class="bullet">•</span> <a href="1983.html#хюля-авшар-и-корона">Хюля Авшар и корона</a> <span class="bullet">•</span> <a href="1983.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1983.html#видеосалон-другое-кино">Видеосалон: другое кино</a> <span class="bullet">•</span> <a href="1983.html#трабзонспор-последний-чемпион">ТРАБЗОНСПОР: ПОСЛЕДНИЙ ЧЕМПИОН</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1984</div>
+        <div class="phenomena-list">
+          <a href="1984.html#1984-год-и-роман">1984: год и роман</a> <span class="bullet">•</span> <a href="1984.html#сикийонетим-что-это-было">Сикийонетим: что это было</a> <span class="bullet">•</span> <a href="1984.html#кдв-жизнь-с-квитанцией">КДВ: жизнь с квитанцией</a> <span class="bullet">•</span> <a href="1984.html#ортадирек-человек-озала">Ортадирек: человек Озала</a> <span class="bullet">•</span> <a href="1984.html#пкк-начало">ПКК: начало</a> <span class="bullet">•</span> <a href="1984.html#флэшдэнс-и-брейкданс">«Флэшдэнс» и брейкданс</a> <span class="bullet">•</span> <a href="1984.html#цветное-телевидение">Цветное телевидение</a> <span class="bullet">•</span> <a href="1984.html#зеки-мюрен-в-бодруме">Зеки Мюрен в Бодруме</a> <span class="bullet">•</span> <a href="1984.html#dünyayı-kurtaran-adam-турецкие-звёздные-войны">«Dünyayı Kurtaran Adam»: турецкие звёздные войны</a> <span class="bullet">•</span> <a href="1984.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1984.html#сабанджы-второй-холдинг">Сабанджы: второй холдинг</a> <span class="bullet">•</span> <a href="1984.html#рекламная-пауза">РЕКЛАМНАЯ ПАУЗА</a> <span class="bullet">•</span> <a href="1984.html#витрина">ВИТРИНА</a> <span class="bullet">•</span> <a href="1984.html#карталлар-юксек-учар">«КАРТАЛЛАР ЮКСЕК УЧАР»</a> <span class="bullet">•</span> <a href="1984.html#бохем-стамбульская-богема">«БОХЕМ»: СТАМБУЛЬСКАЯ БОГЕМА</a> <span class="bullet">•</span> <a href="1984.html#арчелик-и-белая-техника">АРЧЕЛИК И БЕЛАЯ ТЕХНИКА</a> <span class="bullet">•</span> <a href="1984.html#молодёжь-и-кассета">МОЛОДЁЖЬ И КАССЕТА</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1985</div>
+        <div class="phenomena-list">
+          <a href="1985.html#болгарские-турки">Болгарские турки</a> <span class="bullet">•</span> <a href="1985.html#kdv">KDV</a> <span class="bullet">•</span> <a href="1985.html#рухи-су">Рухи Су</a> <span class="bullet">•</span> <a href="1985.html#мост-фатих-султан-мехмет">Мост Фатих Султан Мехмет</a> <span class="bullet">•</span> <a href="1985.html#jaguar">Jaguar</a> <span class="bullet">•</span> <a href="1985.html#live-aid">Live Aid</a> <span class="bullet">•</span> <a href="1985.html#панк-молодёжь-нам-не-нужна">Панк-молодёжь нам не нужна</a> <span class="bullet">•</span> <a href="1985.html#50-миллионов">50 миллионов</a> <span class="bullet">•</span> <a href="1985.html#амадей">«Амадей»</a> <span class="bullet">•</span> <a href="1985.html#спид">СПИД</a> <span class="bullet">•</span> <a href="1985.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1985.html#гечеконду-город-который-строят-ночью">Гечеконду: город, который строят ночью</a> <span class="bullet">•</span> <a href="1985.html#сыла-йолу-дорога-домой">Сыла йолу: дорога домой</a> <span class="bullet">•</span> <a href="1985.html#тюркан-шорай-султан">Тюркан Шорай: султан</a> <span class="bullet">•</span> <a href="1985.html#хэви-метал">ХЭВИ-МЕТАЛ</a> <span class="bullet">•</span> <a href="1985.html#билсак-джазовый-стамбул">БИЛСАК: ДЖАЗОВЫЙ СТАМБУЛ</a> <span class="bullet">•</span> <a href="1985.html#мавиш-мавиш">МАВИШ МАВИШ</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1986</div>
+        <div class="phenomena-list">
+          <a href="1986.html#чернобыль">Чернобыль</a> <span class="bullet">•</span> <a href="1986.html#нечаянная-мадонна">Нечаянная Мадонна</a> <span class="bullet">•</span> <a href="1986.html#невыносимая-лёгкость">Невыносимая лёгкость</a> <span class="bullet">•</span> <a href="1986.html#грэйсленд">Грэйсленд</a> <span class="bullet">•</span> <a href="1986.html#видеомагнитофон">Видеомагнитофон</a> <span class="bullet">•</span> <a href="1986.html#розыгрыш-никах">Розыгрыш никах</a> <span class="bullet">•</span> <a href="1986.html#если-бы-я-был-боб-гелдоф">Если бы я был Боб Гелдоф</a> <span class="bullet">•</span> <a href="1986.html#гамбургер">Гамбургер</a> <span class="bullet">•</span> <a href="1986.html#пинк-флойд-в-меджлисе">Пинк Флойд в Меджлисе</a> <span class="bullet">•</span> <a href="1986.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1986.html#коч-и-сабанджы-анатомия-турецкого-капитала">Коч и Сабанджы: анатомия турецкого капитала</a> <span class="bullet">•</span> <a href="1986.html#migros-конец-бакалейщика">Migros: конец бакалейщика</a> <span class="bullet">•</span> <a href="1986.html#мюжде-ар-новое-женское-лицо">Мюжде Ар: новое женское лицо</a> <span class="bullet">•</span> <a href="1986.html#орхан-генджебай-и-ибрагим-татлысес-два-голоса-арабеска">Орхан Генджебай и Ибрагим Татлысес: два голоса арабеска</a> <span class="bullet">•</span> <a href="1986.html#реклама-как-явление">РЕКЛАМА КАК ЯВЛЕНИЕ</a> <span class="bullet">•</span> <a href="1986.html#спортлото-и-мечта-о-выигрыше">СПОРТЛОТО И МЕЧТА О ВЫИГРЫШЕ</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1987</div>
+        <div class="phenomena-list">
+          <a href="1987.html#платок">Платок</a> <span class="bullet">•</span> <a href="1987.html#мухсин-бей">Мухсин-бей</a> <span class="bullet">•</span> <a href="1987.html#выборы">Выборы</a> <span class="bullet">•</span> <a href="1987.html#радиация-чай-и-детергенты">Радиация, чай и детергенты</a> <span class="bullet">•</span> <a href="1987.html#наим">Наим</a> <span class="bullet">•</span> <a href="1987.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1987.html#sezen-aksu-голос-десятилетия">Sezen Aksu: голос десятилетия</a> <span class="bullet">•</span> <a href="1987.html#кемаль-сунал-смех-как-зеркало">Кемаль Сунал: смех как зеркало</a> <span class="bullet">•</span> <a href="1987.html#thy-крылья-становятся-шире">THY: крылья становятся шире</a> <span class="bullet">•</span> <a href="1987.html#маганда">МАГАНДА</a> <span class="bullet">•</span> <a href="1987.html#йеке-йеке">ЙЕКЕ-ЙЕКЕ</a> <span class="bullet">•</span> <a href="1987.html#хаккяри-в-один-из-сезонов">«ХАККЯРИ В ОДИН ИЗ СЕЗОНОВ»</a> <span class="bullet">•</span> <a href="1987.html#зюльфю-ливанели-возвращается">ЗЮЛЬФЮ ЛИВАНЕЛИ ВОЗВРАЩАЕТСЯ</a> <span class="bullet">•</span> <a href="1987.html#референдум-возвращение-старых-политиков">РЕФЕРЕНДУМ: ВОЗВРАЩЕНИЕ СТАРЫХ ПОЛИТИКОВ</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1988</div>
+        <div class="phenomena-list">
+          <a href="1988.html#покушение-на-озала">Покушение на Озала</a> <span class="bullet">•</span> <a href="1988.html#наим-в-сеуле">Наим в Сеуле</a> <span class="bullet">•</span> <a href="1988.html#галерея">Галерея</a> <span class="bullet">•</span> <a href="1988.html#майлс-и-жоан-в-стамбуле">Майлс и Жоан в Стамбуле</a> <span class="bullet">•</span> <a href="1988.html#аглама-хидреллез">Аглама Хидреллез</a> <span class="bullet">•</span> <a href="1988.html#берген-голос-в-повязке">БЕРГЕН: ГОЛОС В ПОВЯЗКЕ</a> <span class="bullet">•</span> <a href="1988.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1988.html#бюлент-эрсой-возвращение">Бюлент Эрсой: возвращение</a> <span class="bullet">•</span> <a href="1988.html#мюслюм-баба-культ-страдания">Мюслюм Баба: культ страдания</a> <span class="bullet">•</span> <a href="1988.html#ülker-eti-и-жвачка-turbo">Ülker, Eti и жвачка Turbo</a> <span class="bullet">•</span> <a href="1988.html#анталья-рождение-курортной-турции">Анталья: рождение курортной Турции</a> <span class="bullet">•</span> <a href="1988.html#wonderful-life">«WONDERFUL LIFE»</a> <span class="bullet">•</span> <a href="1988.html#мост-фатих-открытие">МОСТ ФАТИХ: ОТКРЫТИЕ</a> <span class="bullet">•</span> <a href="1988.html#майкл-джексон-в-стамбуле">МАЙКЛ ДЖЕКСОН В СТАМБУЛЕ</a> <span class="bullet">•</span> <a href="1988.html#anayurt-oteli-переоткрытие-романа">«ANAYURT OTELİ»: ПЕРЕОТКРЫТИЕ РОМАНА</a> <span class="bullet">•</span> <a href="1988.html#arkadaşim-şeytan">«ARKADAŞIM ŞEYTAN»</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1989</div>
+        <div class="phenomena-list">
+          <a href="1989.html#озал-президент">Озал — президент</a> <span class="bullet">•</span> <a href="1989.html#местные-выборы-конец-эпохи-анап">Местные выборы: конец эпохи АНАП</a> <span class="bullet">•</span> <a href="1989.html#ламбада">Ламбада</a> <span class="bullet">•</span> <a href="1989.html#стена">Стена</a> <span class="bullet">•</span> <a href="1989.html#тюп-бебек">Тюп-бебек</a> <span class="bullet">•</span> <a href="1989.html#галатасарай-в-полуфинале">Галатасарай в полуфинале</a> <span class="bullet">•</span> <a href="1989.html#запрет-курения">Запрет курения</a> <span class="bullet">•</span> <a href="1989.html#берген">Берген</a> <span class="bullet">•</span> <a href="1989.html#тюрбан-маятник">Тюрбан: маятник</a> <span class="bullet">•</span> <a href="1989.html#исход-болгарских-турок">Исход болгарских турок</a> <span class="bullet">•</span> <a href="1989.html#первое-частное-тв">Первое частное ТВ</a> <span class="bullet">•</span> <a href="1989.html#7ден-77е">«7’ден 77’е»</a> <span class="bullet">•</span> <a href="1989.html#назым-буржуазный">Назым — буржуазный?</a> <span class="bullet">•</span> <a href="1989.html#права-человека-сейчас">Права человека — сейчас</a> <span class="bullet">•</span> <a href="1989.html#фатих-акын-и-новое-поколение">Фатих Акын и новое поколение</a> <span class="bullet">•</span> <a href="1989.html#эртем-эгилмез">Эртем Эгилмез</a> <span class="bullet">•</span> <a href="1989.html#казы-казан">Казы-казан</a> <span class="bullet">•</span> <a href="1989.html#türkiyem-cennetim">«TÜRKIYEM CENNETİM»</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1990</div>
+        <div class="phenomena-list">
+          <a href="1990.html#война-в-заливе">Война в Заливе</a> <span class="bullet">•</span> <a href="1990.html#убийства">Убийства</a> <span class="bullet">•</span> <a href="1990.html#дев-сол">Дев-Сол</a> <span class="bullet">•</span> <a href="1990.html#прах-мендереса">Прах Мендереса</a> <span class="bullet">•</span> <a href="1990.html#1-мая-на-таксиме">1 мая на Таксиме</a> <span class="bullet">•</span> <a href="1990.html#истикляль-и-трамвай">Истикляль и трамвай</a> <span class="bullet">•</span> <a href="1990.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1990.html#первое-частное-радио">ПЕРВОЕ ЧАСТНОЕ РАДИО</a> <span class="bullet">•</span> <a href="1990.html#орхан-памук-чёрная-книга">ОРХАН ПАМУК: «ЧЁРНАЯ КНИГА»</a> <span class="bullet">•</span> <a href="1990.html#турку-бар">ТУРКУ-БАР</a> <span class="bullet">•</span> <a href="1990.html#зонгулдак-горняки-идут-в-анкару">ЗОНГУЛДАК: ГОРНЯКИ ИДУТ В АНКАРУ</a> <span class="bullet">•</span> <a href="1990.html#900-лю-хатлар-секс-линии">900-ЛЮ ХАТЛАР: СЕКС-ЛИНИИ</a>
+        </div>
+      </div>
+      <div class="year-block">
+        <div class="year-label">1991</div>
+        <div class="phenomena-list">
+          <a href="1991.html#зонгулдак">Зонгулдак</a> <span class="bullet">•</span> <a href="1991.html#война-заканчивается-беженцы-начинаются">Война заканчивается — беженцы начинаются</a> <span class="bullet">•</span> <a href="1991.html#конец-эпохи-анап">Конец эпохи АНАП</a> <span class="bullet">•</span> <a href="1991.html#дев-сол-в-1991-м">Дев-Сол в 1991-м</a> <span class="bullet">•</span> <a href="1991.html#метин-октай">Метин Октай</a> <span class="bullet">•</span> <a href="1991.html#футбол">Футбол</a> <span class="bullet">•</span> <a href="1991.html#тургут-озал-и-курдский-вопрос">ТУРГУТ ОЗАЛ И КУРДСКИЙ ВОПРОС</a> <span class="bullet">•</span> <a href="1991.html#частное-телевидение-взрывается">ЧАСТНОЕ ТЕЛЕВИДЕНИЕ ВЗРЫВАЕТСЯ</a> <span class="bullet">•</span> <a href="1991.html#несчастный-случай-в-шырнаке">НЕСЧАСТНЫЙ СЛУЧАЙ В ШЫРНАКЕ</a> <span class="bullet">•</span> <a href="1991.html#супермаркет-против-бакалейщика">СУПЕРМАРКЕТ ПРОТИВ БАКАЛЕЙЩИКА</a> <span class="bullet">•</span> <a href="1991.html#тарихи-яримада-стамбул-в-юнеско">ТАРИХИ ЯРИМАДА: СТАМБУЛ В ЮНЕСКО</a> <span class="bullet">•</span> <a href="1991.html#özal-и-смерть-предчувствие">ÖZAL И СМЕРТЬ (ПРЕДЧУВСТВИЕ)</a> <span class="bullet">•</span> <a href="1991.html#барыш-манчо-7ден-77е">БАРЫШ МАНЧО: «7&#x27;ДЕН 77&#x27;Е»</a> <span class="bullet">•</span> <a href="1991.html#чекич-гюч-иностранцы-на-нашей-земле">ЧЕКИЧ ГЮЧ: ИНОСТРАНЦЫ НА НАШЕЙ ЗЕМЛЕ</a>
+        </div>
+      </div>
+  </div>
+  </main>
+
+  <footer>
+    <p>© Намедни. Наша Эра · Леонид Парфенов. Турция: 1942, 1980–1991.</p>
+  </footer>
+
+</body>
+
+</html>

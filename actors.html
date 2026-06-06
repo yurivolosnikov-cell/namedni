@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Намедни по-турецки — Список турецких актеров</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap');
+
+  :root {
+    --dark-blue: #070c24;
+    --dark-red: #800c14;
+    --gold: #b8860b;
+    --text-color: #1a1a1a;
+    --link-color: #1a548c;
+    --bullet-color: #999999;
+    --bg-cream: #faf9f6;
+    --cream-card: #f5f0e8;
+    --border-color: #d4cfc8;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--text-color);
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ======= HEADER STYLE ======= */
+  header {
+    background: linear-gradient(135deg, rgba(7, 12, 36, 0.88) 0%, rgba(74, 13, 21, 0.8) 60%, rgba(128, 12, 20, 0.88) 100%), url('turkish_collage.png') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 30px 40px 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .header-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-title-block {
+    margin-bottom: 25px;
+  }
+
+  .header-title {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+
+  .header-subtitle {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.85;
+    margin-top: 2px;
+  }
+
+  /* ======= HEADER NAVIGATION ======= */
+  nav.header-nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-item {
+    color: #d8c2c8;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-bottom-color 0.2s;
+    font-family: 'PT Sans', Arial, sans-serif;
+  }
+
+  .nav-item:hover {
+    color: #ffffff;
+  }
+
+  .nav-item.active {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+  }
+
+  .ntv-badge-container {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-bottom: 15px;
+  }
+
+  .ntv-badge {
+    width: 44px;
+    height: 44px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border: 1px solid #333;
+    transition: transform 0.2s ease;
+  }
+
+  .ntv-badge:hover {
+    transform: scale(1.08);
+  }
+
+  .ntv-asterisk {
+    color: #a3cc29;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    font-family: 'PT Sans', sans-serif;
+    cursor: default;
+  }
+
+  /* ======= MAIN CONTAINER ======= */
+  main {
+    max-width: 1250px;
+    margin: 40px auto 80px;
+    padding: 0 40px;
+  }
+
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: #111111;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+    border-bottom: 2px solid var(--dark-red);
+    padding-bottom: 10px;
+  }
+  
+  .intro-text {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: #333;
+    font-style: italic;
+  }
+
+  /* ======= STYLED TABLES ======= */
+  table.premium-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  table.premium-table th {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  table.premium-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 15px;
+  }
+
+  table.premium-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  table.premium-table tr:nth-child(even) {
+    background-color: #fcfbfa;
+  }
+
+  table.premium-table tr:hover {
+    background-color: #f7f5f0;
+  }
+  
+  .rank-badge {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: var(--dark-red);
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+  }
+
+  /* ======= CARDS & LISTS ======= */
+  .bracket-section {
+    margin-bottom: 45px;
+  }
+
+  .bracket-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-red);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--gold);
+    padding-left: 15px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .family-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .family-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    border-color: var(--gold);
+  }
+
+  .family-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--gold);
+    min-width: 40px;
+  }
+
+  .family-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .family-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+  }
+
+  .family-business {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-top: 2px;
+  }
+
+  /* ======= ACTORS DESIGN ======= */
+  .actor-block {
+    margin-bottom: 40px;
+  }
+
+  .actor-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin: 40px 0 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+  }
+
+  .actor-era-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-red);
+    margin: 25px 0 15px;
+  }
+
+  .actors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 800px) {
+    .actors-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .actor-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+  }
+
+  .actor-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 8px;
+  }
+
+  .actor-meta {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .actor-bio {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  .actor-bio p {
+    margin-bottom: 10px;
+  }
+  .actor-bio p:last-child {
+    margin-bottom: 0;
+  }
+
+  .alphabet-columns {
+    column-count: 4;
+    column-gap: 30px;
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+  }
+
+  @media (max-width: 900px) {
+    .alphabet-columns {
+      column-count: 3;
+    }
+  }
+  @media (max-width: 600px) {
+    .alphabet-columns {
+      column-count: 2;
+    }
+  }
+  @media (max-width: 400px) {
+    .alphabet-columns {
+      column-count: 1;
+    }
+  }
+
+  .letter-group {
+    break-inside: avoid;
+    margin-bottom: 20px;
+  }
+
+  .letter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--dark-red);
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+    padding-right: 15px;
+    margin-bottom: 8px;
+  }
+
+  .actors-list-item {
+    list-style: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    padding: 4px 0;
+    color: #444;
+  }
+
+  /* ======= FOOTER ======= */
+  footer {
+    background-color: #111111;
+    color: #777777;
+    text-align: center;
+    padding: 30px 40px;
+    font-size: 12px;
+    border-top: 1px solid #222;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  footer a {
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  footer a:hover {
+    color: #ffffff;
+  }
+
+  /* ======= RESPONSIVE DESIGN ======= */
+  @media (max-width: 900px) {
+    header {
+      padding: 20px 20px 0 20px;
+    }
+    main {
+      padding: 0 20px;
+      margin: 30px auto 60px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .ntv-badge-container {
+      align-self: flex-start;
+      margin-bottom: 10px;
+    }
+    nav.header-nav {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .nav-item {
+      font-size: 12px;
+      padding-bottom: 6px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="header-left">
+      <div class="header-title-block">
+        <h2 class="header-title">Намедни по-турецки</h2>
+        <div class="header-subtitle">Проект, вдохновленный Л.Парфеновым</div>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-item ">Феномены по годам</a>
+        <a href="companies.html" class="nav-item ">30 крупнейших компаний Турции</a>
+        <a href="rich_families.html" class="nav-item ">30 самых богатых людей и семей Турции</a>
+        <a href="actors.html" class="nav-item active">Список турецких актеров</a>
+      </nav>
+    </div>
+    <div class="ntv-badge-container">
+      <div class="ntv-badge" title="Намедни / НТВ">
+        <span class="ntv-asterisk">✳</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1 class="page-title">Список турецких актеров</h1>
+  <div class="intro-text">История турецкого театра и кинематографа от зарождения в поздний османский период до триумфа золотого века Yeşilçam и современной мировой экспансии турецких сериалов (dizi).</div>
+  <h2 class="actor-section-title">Исторический очерк</h2>
+<div class="actor-block">
+  <h3 class="actor-era-title">Origins and Early Development</h3>
+  <div style="font-size: 16px; color: #333;"><p>Turkish cinema originated in the late Ottoman period, with the first known Turkish film, <em>Ayastefanos'taki Rus Abidesinin Yıkılışı</em>, produced in 1914 by Fuat Uzkınay.</p>
+<p>The Republican era saw the rise of theater-trained actors like Bedia Muvahhit, recognized as the first Turkish Muslim actress for her role in Muhsin Ertuğrul's 1923 film <em>Ateşten Gömlek</em>, and Cahide Sonku, who became the first major female film star in <em>Bataklı Damın Kızı Aysel</em> (1934).</p>
+<p>Traditional performance forms such as Karagöz shadow theatre and meddah storytelling shaped the theatrical culture from which early cinema emerged. The establishment of Darülbedayi-i Osmani in 1914 helped professionalize acting in Istanbul.</p>
+<p>The advent of sound in the 1930s changed the industry. Muhsin Ertuğrul's <em>İstanbul Sokaklarında</em> (1931), a co-production with Greece and Egypt, became the first Turkish sound film. It was followed by <em>Bir Millet Uyanıyor</em> (1932), which helped move Turkish cinema from stage-like adaptations toward original screen narratives.</p>
+<p>Early Turkish actors faced censorship, limited technical infrastructure, and the difficulty of shifting from stage performance to screen acting. Before the Republic, Armenian and Greek performers had played important roles in Ottoman cinema and theatre, partly because Muslim Turkish women faced social restrictions on appearing publicly as performers.</p>
+<ul><li></li></ul></div>
+</div>
+<div class="actor-block">
+  <h3 class="actor-era-title">Yeşilçam Era</h3>
+  <div style="font-size: 16px; color: #333;"><p>The Yeşilçam era, spanning roughly from the 1950s to the 1980s, became the golden age of Turkish cinema.</p>
+<p>Centered around Yeşilçam Street in Istanbul, the industry produced melodramas, comedies, historical adventures, rural dramas, arabesque films and social realist stories. By the mid-1960s, Turkish cinema was producing more than 200 films annually, and in the 1970s output exceeded 300 films per year.</p>
+<p>Yeşilçam reflected Turkey's modernization problems:
+- rural-to-urban migration,
+- poverty,
+- class conflict,
+- family honor,
+- changing gender roles,
+- nostalgia for village life,
+- the rise of the city poor.</p>
+<p>A distinctive practice of the period was post-synchronization dubbing. Many on-screen stars were dubbed by professional voice actors in standardized Istanbul Turkish.</p>
+<p>Key genres included:
+- family melodrama,
+- comedy,
+- arabesque films,
+- historical epics,
+- village dramas,
+- urban migration stories.</p>
+<p>By the late 1970s and 1980s, television and video piracy weakened the Yeşilçam studio system.</p>
+<ul><li></li></ul></div>
+</div>
+<div class="actor-block">
+  <h3 class="actor-era-title">Modern Turkish Entertainment</h3>
+  <div style="font-size: 16px; color: #333;"><p>After the 1980 military coup and the liberalization policies of the Turgut Özal era, Turkey's media environment changed significantly.</p>
+<p>Private television began with Star TV, initially Magic Box, in 1989. This opened the way for the modern Turkish dizi industry.</p>
+<p>By the 2000s and 2010s, Turkish television dramas became a major export product. Turkish dizis reached audiences in the Balkans, the Middle East, Central Asia, Latin America, South Asia and parts of Europe.</p>
+<p>Major modern developments include:
+- the global success of <em>Muhteşem Yüzyıl</em>,
+- the rise of Netflix Turkey,
+- the international spread of romantic dramas,
+- new prestige cinema led by directors such as Nuri Bilge Ceylan,
+- internationally recognized actors such as Haluk Bilginer.</p>
+<ul><li></li></ul></div>
+</div>
+  <h2 class="actor-section-title">Легендарные актеры (Мужчины)</h2>
+<h3 class="actor-era-title">Born Before 1950</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Ayhan Işık</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Cüneyt Arkın</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Kemal Sunal</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Tarık Akan</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Kadir İnanır</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Born 1950–1980</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Haluk Bilginer</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Kenan İmirzalıoğlu</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Murat Yıldırım</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Engin Altan Düzyatan</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Halit Ergenç</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Born After 1980</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Kıvanç Tatlıtuğ</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Burak Özçivit</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Çağatay Ulusoy</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Can Yaman</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Kerem Bürsin</h3>
+<div class="actors-grid">
+</div>
+  <h2 class="actor-section-title">Легендарные актрисы (Женщины)</h2>
+<h3 class="actor-era-title">Born Before 1950</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Bedia Muvahhit</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Cahide Sonku</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Türkan Şoray</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Hülya Koçyiğit</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Fatma Girik</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Adile Naşit</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Born 1950–1980</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Necla Nazır</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Oya Başar</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Meral Zeren</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Vahide Perçin</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Born After 1980</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Hande Erçel</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Fahriye Evcen</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Serenay Sarıkaya</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Beren Saat</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Demet Özdemir</h3>
+<div class="actors-grid">
+</div>
+  <h2 class="actor-section-title">Турецкие актеры в диаспоре</h2>
+<h3 class="actor-era-title">In Europe</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Tchéky Karyo</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Birol Ünel</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Numan Acar</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Haluk Bilginer</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">In North America</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Haluk Bilginer</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Sibel Kekilli</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Numan Acar</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Ennis Esmer</h3>
+<div class="actors-grid">
+</div>
+<h3 class="actor-era-title">Other Notable Figures</h3>
+<div class="actors-grid">
+</div>
+  <h2 class="actor-section-title">Алфавитный указатель актеров</h2>
+<div class="alphabet-columns">
+  <div class="letter-group">
+    <div class="letter-title">A</div>
+    <ul>
+      <li class="actors-list-item">Numan Acar</li>
+      <li class="actors-list-item">Kerim Afşar</li>
+      <li class="actors-list-item">Aydemir Akbaş</li>
+      <li class="actors-list-item">Sıtkı Akçatepe</li>
+      <li class="actors-list-item">Sarp Akkaya</li>
+      <li class="actors-list-item">Metin Akpınar</li>
+      <li class="actors-list-item">Alişan</li>
+      <li class="actors-list-item">Kerem Alışık</li>
+      <li class="actors-list-item">Sadri Alışık</li>
+      <li class="actors-list-item">Hüseyin Alp</li>
+      <li class="actors-list-item">Cüneyt Arkın</li>
+      <li class="actors-list-item">İsmet Ay</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">B</div>
+    <ul>
+      <li class="actors-list-item">Tamer Balcı</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">C</div>
+    <ul>
+      <li class="actors-list-item">Engin Çağlar</li>
+      <li class="actors-list-item">Civan Canova</li>
+      <li class="actors-list-item">Murat Cemcir</li>
+      <li class="actors-list-item">Şenol Coşkun</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">D</div>
+    <ul>
+      <li class="actors-list-item">Haldun Dormen</li>
+      <li class="actors-list-item">İsmail Dümbüllü</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">E</div>
+    <ul>
+      <li class="actors-list-item">Esin Engin</li>
+      <li class="actors-list-item">Köksal Engür</li>
+      <li class="actors-list-item">Ersan Erdura</li>
+      <li class="actors-list-item">Zafer Ergin</li>
+      <li class="actors-list-item">Cem Erman</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">G</div>
+    <ul>
+      <li class="actors-list-item">Yılmaz Gruda</li>
+      <li class="actors-list-item">Yılmaz Güney</li>
+      <li class="actors-list-item">Müslüm Gürses</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">H</div>
+    <ul>
+      <li class="actors-list-item">Hayati Hamzaoğlu</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">I</div>
+    <ul>
+      <li class="actors-list-item">Ayhan Işık</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">J</div>
+    <ul>
+      <li class="actors-list-item">Remzi Aydın Jöntürk</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">K</div>
+    <ul>
+      <li class="actors-list-item">Kazım Kartal</li>
+      <li class="actors-list-item">Hulusi Kentmen</li>
+      <li class="actors-list-item">Levent Kırca</li>
+      <li class="actors-list-item">Macit Koper</li>
+      <li class="actors-list-item">Cengiz Küçükayvaz</li>
+      <li class="actors-list-item">Tuncel Kurtiz</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">M</div>
+    <ul>
+      <li class="actors-list-item">Cüneyt Mete</li>
+      <li class="actors-list-item">Dario Moreno</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">O</div>
+    <ul>
+      <li class="actors-list-item">Yaman Okay</li>
+      <li class="actors-list-item">Turgut Özatay</li>
+      <li class="actors-list-item">Turan Özdemir</li>
+      <li class="actors-list-item">Ahmet Özhan</li>
+      <li class="actors-list-item">Yiğit Özşener</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">P</div>
+    <ul>
+      <li class="actors-list-item">Uğur Pektaş</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">S</div>
+    <ul>
+      <li class="actors-list-item">Kamer Sadık</li>
+      <li class="actors-list-item">Bülent Şakrak</li>
+      <li class="actors-list-item">Nejat Saydam</li>
+      <li class="actors-list-item">Münir Nurettin Selçuk</li>
+      <li class="actors-list-item">Ali Şen</li>
+      <li class="actors-list-item">Ferhan Şensoy</li>
+      <li class="actors-list-item">Öztürk Serengil</li>
+      <li class="actors-list-item">Mümtaz Sevinç</li>
+      <li class="actors-list-item">Şafak Sezer</li>
+      <li class="actors-list-item">Kamil Sönmez</li>
+      <li class="actors-list-item">Kemal Sunal</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">T</div>
+    <ul>
+      <li class="actors-list-item">Cihat Tamer</li>
+      <li class="actors-list-item">Erol Taş</li>
+      <li class="actors-list-item">Nubar Terziyan</li>
+      <li class="actors-list-item">Kartal Tibet</li>
+      <li class="actors-list-item">Emre Törün</li>
+      <li class="actors-list-item">Erdal Tosun</li>
+      <li class="actors-list-item">Gürdal Tosun</li>
+      <li class="actors-list-item">Necdet Tosun</li>
+      <li class="actors-list-item">Ali Tutal</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">U</div>
+    <ul>
+      <li class="actors-list-item">Ümit Yesin</li>
+      <li class="actors-list-item">Ulvi Uraz</li>
+      <li class="actors-list-item">Kamran Usluer</li>
+      <li class="actors-list-item"></li>
+    </ul>
+  </div>
+  <div class="letter-group">
+    <div class="letter-title">Y</div>
+    <ul>
+      <li class="actors-list-item">Cem Yılmaz</li>
+      <li class="actors-list-item">İhsan Yüce</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p>© Намедни по-турецки · Проект, вдохновленный Л.Парфеновым. <a href="index.html">Феномены по годам</a></p>
+</footer>
+
+</body>
+</html>

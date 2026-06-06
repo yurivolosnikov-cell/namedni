@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Намедни по-турецки — 1991</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700;900&display=swap');
+  :root{--cream:#f5f0e8;--dark:#1a1410;--burgundy:#6b0f1a;--red:#c0392b;--gold:#b8860b;--midgray:#5a5248;--lightgray:#d4cfc8;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--cream);color:var(--dark);font-family:'PT Serif',Georgia,serif;font-size:16px;line-height:1.7;}
+  header{background:linear-gradient(135deg,#5a0a14 0%,#7d121e 100%);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 4px 15px rgba(0,0,0,.15);}
+  .header-inner{max-width:1300px;margin:0 auto;padding:20px 40px;display:flex;align-items:center;gap:40px;}
+  .year-number{font-family:'PT Sans',sans-serif;font-size:100px;font-weight:900;line-height:1;color:#fff;letter-spacing:-2px;}
+  .header-divider{width:2px;height:70px;background:rgba(255,255,255,.25);flex-shrink:0;}
+  .header-text{display:flex;flex-direction:column;gap:6px;font-family:'PT Sans',sans-serif;}
+  .header-main-title{font-size:18px;font-weight:700;letter-spacing:1.5px;color:#fff;text-transform:uppercase;}
+  .header-summary{font-size:14px;color:#e5cfd2;}
+  .header-section{font-size:12px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+  .toc{background:var(--dark);color:var(--cream);border-top:1px solid #2a2520;}
+  .toc-inner{max-width:1300px;margin:0 auto;padding:15px 40px;display:flex;flex-wrap:wrap;gap:6px 28px;font-family:'PT Sans',sans-serif;font-size:13px;}
+  .toc span{color:var(--gold);margin-right:4px;font-weight:700;}
+  .toc a{color:#c8c0b0;text-decoration:none;transition:color .2s;}
+  .toc a:hover{color:var(--cream);}
+  main{max-width:1300px;margin:0 auto;padding:0 40px 80px;}
+  .year-nav-bar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--lightgray);font-family:'PT Sans',sans-serif;font-size:13px;margin-bottom:20px;}
+  .year-nav-bar a{color:var(--burgundy);text-decoration:none;font-weight:700;}
+  .year-nav-bar a:hover{text-decoration:underline;}
+  .phenomenon{margin:60px 0;padding-bottom:60px;border-bottom:1px solid var(--lightgray);display:flex;flex-direction:column;gap:20px;}
+  .pill-label{padding:5px 12px;background:var(--burgundy);color:#fff;display:inline-block;font-weight:700;font-family:'PT Sans',sans-serif;font-size:11px;letter-spacing:1px;border-radius:2px;width:fit-content;text-transform:uppercase;margin-bottom:8px;}
+  .phenom-title{font-family:'PT Sans',sans-serif;font-size:36px;font-weight:900;line-height:1.15;margin-bottom:10px;color:var(--dark);text-transform:uppercase;letter-spacing:-.5px;}
+  .phenom-lede{border-left:5px solid var(--burgundy);padding-left:20px;margin:10px 0 25px;font-style:italic;font-weight:700;font-size:18px;line-height:1.6;color:#1a1410;font-family:'PT Serif',serif;}
+  .phenom-body-text{column-count:2;column-gap:40px;text-align:justify;color:#2a2420;font-size:15px;line-height:1.75;}
+  .phenom-body-text p{margin-bottom:12px;}
+  .phenom-body-text p:last-child{margin-bottom:0;}
+  .ref-note{font-size:13px;color:var(--midgray);font-style:italic;margin-top:8px;}
+  /* ── FALLBACK (no photo yet) ── */
+  .fallback-box{background:#eae6de;border:1px dashed #c8c0b0;padding:40px 30px;text-align:center;font-family:'PT Sans',sans-serif;color:#8a8278;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin:0 0 28px;min-height:180px;}
+  .fallback-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#a09488;}
+  .fallback-subtitle{font-size:11px;}
+
+  /* ── PHOTO CAPTION shared style ── */
+  .img-cap{font-family:'PT Sans',sans-serif;font-size:12px;color:var(--midgray);margin-top:8px;line-height:1.55;font-style:italic;padding-left:2px;}
+
+  /* ── HERO: full-width photo, NO crop, natural height ── */
+  .img-hero{width:100%;margin:0 0 28px;}
+  .img-hero img{width:100%;height:auto;display:block;border:1px solid var(--lightgray);filter:sepia(8%) contrast(1.04) brightness(1.01);}
+
+  /* ── PAIR: two equal photos side by side, full width, NO crop ── */
+  .img-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:32px -0px 0;width:100%;}
+  .img-pair figure{margin:0;}
+  .img-pair figure img{width:100%;height:auto;display:block;border:1px solid var(--lightgray);filter:sepia(8%) contrast(1.04);}
+
+  /* ── TRIO: three photos in a row, NO crop ── */
+  .img-trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:32px 0 0;width:100%;}
+  .img-trio figure{margin:0;}
+  .img-trio figure img{width:100%;height:auto;display:block;border:1px solid var(--lightgray);filter:sepia(8%) contrast(1.04);}
+
+  /* ── RIGHT FLOAT: sidebar photo, NO crop ── */
+  .img-right{float:right;width:40%;margin:6px 0 20px 32px;}
+  .img-right img{width:100%;height:auto;display:block;border:1px solid var(--lightgray);filter:sepia(8%) contrast(1.04);}
+  .phenom-body-text::after{content:'';display:table;clear:both;}
+
+  @media(max-width:800px){
+    .img-pair,.img-trio{grid-template-columns:1fr;}
+    .img-right{float:none;width:100%;margin:20px 0;}
+  }
+  .chronicle{background:var(--dark);color:var(--cream);margin:70px -40px 0;padding:50px 40px;}
+  .chronicle h2{font-family:'PT Sans',sans-serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:30px;font-weight:400;}
+  .chronicle-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:6px 40px;}
+  .chronicle-item{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid #2a2520;font-size:14px;}
+  .chron-month{font-family:'PT Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin:20px 0 10px;grid-column:1/-1;}
+  .symbols-section{margin:60px 0;background:var(--cream);border:1px solid var(--lightgray);padding:40px;}
+  .symbols-title{font-family:'PT Sans',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--midgray);margin-bottom:30px;}
+  .symbols-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 40px;}
+  .symbol-item{display:flex;flex-direction:column;}
+  .symbol-name{font-family:'PT Serif',serif;font-size:20px;font-weight:700;color:var(--burgundy);margin-bottom:8px;}
+  .symbol-desc{font-size:14px;color:var(--midgray);line-height:1.6;}
+  footer{background:var(--dark);color:#777;text-align:center;padding:30px 40px;font-size:12px;font-family:'PT Sans',sans-serif;border-top:1px solid #222;}
+  footer a{color:#999;text-decoration:none;}
+  @media(max-width:900px){
+    .header-inner{padding:15px 20px;gap:20px;}
+    .year-number{font-size:60px;}
+    main{padding:0 20px 60px;}
+    .phenom-body-text{column-count:1;}
+    .symbols-grid{grid-template-columns:1fr;}
+    .chronicle{margin:70px -20px 0;padding:40px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="year-block">
+      <div class="year-number">1991</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="header-text">
+      <div class="header-main-title">Намедни по-турецки</div>
+      <div class="header-summary">Зонгулдак · Беженцы · Конец АНАП · Дев-Сол · Метин Октай · Манчо</div>
+      <div class="header-section">Турция · Феномены по годам</div>
+    </div>
+  </div>
+  <nav class="toc">
+    <div class="toc-inner">
+      <a href="index.html" style="color:var(--gold);font-weight:700;text-decoration:none;">← Все годы</a>
+      <span>·</span><a href="#зонгулдак">Зонгулдак</a><span>·</span><a href="#война-заканчивается-беженцы-начинаются">Война заканчивается — беженцы начинаются</a><span>·</span><a href="#конец-эпохи-анап">Конец эпохи АНАП</a><span>·</span><a href="#дев-сол-в-1991-м">Дев-Сол в 1991-м</a><span>·</span><a href="#метин-октай">Метин Октай</a><span>·</span><a href="#футбол">Футбол</a><span>·</span><a href="#тургут-озал-и-курдский-вопрос">ТУРГУТ ОЗАЛ И КУРДСКИЙ ВОПРОС</a><span>·</span><a href="#частное-телевидение-взрывается">ЧАСТНОЕ ТЕЛЕВИДЕНИЕ ВЗРЫВАЕТСЯ</a><span>·</span><a href="#несчастный-случай-в-шырнаке">НЕСЧАСТНЫЙ СЛУЧАЙ В ШЫРНАКЕ</a><span>·</span><a href="#супермаркет-против-бакалейщика">СУПЕРМАРКЕТ ПРОТИВ БАКАЛЕЙЩИКА</a><span>·</span><a href="#тарихи-яримада-стамбул-в-юнеско">ТАРИХИ ЯРИМАДА: СТАМБУЛ В ЮНЕСКО</a><span>·</span><a href="#özal-и-смерть-предчувствие">ÖZAL И СМЕРТЬ (ПРЕДЧУВСТВИЕ)</a><span>·</span><a href="#барыш-манчо-7ден-77е">БАРЫШ МАНЧО: «7&#x27;ДЕН 77&#x27;Е»</a><span>·</span><a href="#чекич-гюч-иностранцы-на-нашей-земле">ЧЕКИЧ ГЮЧ: ИНОСТРАНЦЫ НА НАШЕЙ ЗЕМЛЕ</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="year-nav-bar">
+    <a href="1990.html">← 1990</a>
+    <span style="font-family:'PT Sans',sans-serif;color:var(--midgray);">1991 — 14 феноменов</span>
+    <span></span>
+  </div>
+
+  
+<div class="phenomenon" id="зонгулдак">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">Зонгулдак</h2>
+  </div>
+  <p class="phenom-lede">В декабре 1990-го шахтёры Зонгулдака объявили забастовку. Правительство ответило локаутом. Тогда 80 000 человек пошли пешком на Анкару.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Генеральный съезд профсоюза «Маден-Иш» принял решение о забастовке ещё 30 ноября: закрытие шахт, сокращения, угроза приватизации — терпеть дальше было невозможно. 4 декабря должен был начаться локаут. За несколько дней до этого в Зонгулдак стянули жандармов, коммандос и ОМОН. Утром 30 ноября на воротах шахт появились забастовочные пикеты. На четвёртый день к горнякам присоединились городские торговцы и муниципальные рабочие — на улицах Зонгулдака собралось 70 000 человек. Турк-Иш 20 декабря объявил о подготовке однодневной всеобщей забастовки по всей стране. Правительство её запретило: незаконно.</p>
+<p>3 января 1991 года шахтёры решили идти. Автобусы, которых профсоюз нанял тысячу, полиция не пустила. Тогда колонна выдвинулась пешком. Дисциплина была железной: каждая шахта шла своей группой, в своём порядке. Вдоль дороги жители деревень выносили еду и воду, стояли и аплодировали. Правительство вело переговоры — и одновременно выстраивало баррикады впереди. Первую баррикаду у Деврека колонна обошла без остановки.</p>
+<p>На двенадцатом километре пути рабочих встретила настоящая стена: бульдозеры, водомёты, сотни солдат и полицейских. Перед ней шахтёры встали и стали ждать. 7 января 201 человека забрали спящими — ночной арест прямо в поле. В тот же день профсоюзный лидер Шемси Денизер полетел в Анкару на переговоры с премьером Акбулутом. В Менгене колонна остановилась. За первые два дня марша умерли два рабочих. В Менгенских морозах погибла ещё одна женщина. 8 января Денизер призвал женщин вернуться в Зонгулдак. Женщины отказались.</p>
+<p>Переговоры зашли в тупик. Металлисты в это время бастовали отдельно — их забастовку Совет министров 25 января заморозил на 60 дней, сославшись на войну в Заливе и «национальную безопасность». Под это решение одним движением остановили 115 000 рабочих в разных отраслях. 6 февраля подписано соглашение по зонгулдакским горнякам — за 49 905 лир вместо требуемых 98 000. Половина от запрошенного. Колонна развернулась и прошла 112 километров обратно.</p>
+<p>Марш на Анкару стал образом эпохи — не победой, но и не поражением. Он показал, что есть Турция, которая не видна из стамбульских витрин и анкарских кулуаров: Турция шахт, холода, коллективной дисциплины и готовности идти пешком сто километров за своим правом.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="война-заканчивается-беженцы-начинаются">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">Война заканчивается — беженцы начинаются</h2>
+  </div>
+  <p class="phenom-lede">17 января самолёты с базы Инджирлик начали бомбить Ирак. Война в Персидском заливе, о которой Турция весь 1990-й год спорила — воевать или не воевать, — стала реальностью над её головой.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Озал принял решение задолго до этого дня. Инджирлик открыт для союзников, нефтепровод перекрыт по решению ООН. Патриоты расставлены по возможным точкам иракских ударов. 21 января Турция размещает американские ракеты Patriot в ключевых городах. Страна на военном положении по факту, хотя официально — нет.</p>
+<p>Война кончилась в феврале. Но её последствие оказалось куда масштабнее, чем сама война. 18 марта через границу начали переходить пешмерги — иракские курды, спасавшиеся от Саддама, который после разгрома бросил армию на север страны. 8 апреля их число перевалило за 300 000. Турецкая граница открылась — стихийно, вопреки всем официальным протоколам. Горные перевалы превратились в колонны людей с детьми, скотом и узлами. Армия устанавливала лагеря. ООН разворачивала грузовики с гуманитарной помощью.</p>
+<p>Это был крупнейший поток беженцев в Европе и на Ближнем Востоке со времён Второй мировой. Для Турции он поставил вопрос ребром: что делать с курдами? С иракскими — ясно, временный лагерь, потом назад. Но с собственными — ответа не было. В том же январе, 25-го, правительство отменило закон 1983 года, запрещавший говорить, петь и записывать музыку на курдском. Закон назывался «2932 sayılı kanun». Он просуществовал восемь лет. Его отмена прошла почти незаметно на фоне войны — но это был первый официальный шаг назад от политики тотального лингвистического запрета.</p>
+<p class="ref-note">см. «Война в Заливе», 1990</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="конец-эпохи-анап">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">Конец эпохи АНАП</h2>
+  </div>
+  <p class="phenom-lede">20 октября 1991 года Турция впервые за восемь лет провела досрочные парламентские выборы. АНАП, правившая с 1983 года, получила 115 мест из 450. Это было концом.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Восемь лет одна партия определяла направление страны. Özal-эпоха — приватизация, либерализация, телевидение, кредиты, рост и инфляция, эйфория потребления и усталость от него. В 1991-м всё это вылилось в цифры: АНАП — 115 мест, DYP Демиреля — 178, SHP — 88, RP — 62. Первый раз с 1980 года в парламент вошла исламистская партия с таким результатом.</p>
+<p>Правительство Акбулута — технократический кабинет без харизмы — и в марте-апреле сменилось: 15 июня на 3-м Конгрессе АНАП генеральным председателем избран Месут Йылмаз. 16 июня Акбулут ушёл. 5 июля кабинет Йылмаза получил вотум доверия. Но уже было поздно: страна устала от АНАП вне зависимости от её лидера.</p>
+<p>11 ноября DYP Демиреля и SHP Инёню подписали коалиционное соглашение. 20 ноября сформирован Седьмой кабинет Демиреля — первое коалиционное правительство с правоцентристами и социал-демократами. Новые лица: Танsu Чиллер в Государственном совете, Хикмет Четин в МИДе. Эпоха Озала как правительственной власти закончилась. Он остался президентом — наблюдать, как другие управляют страной, которую сам выстроил.</p>
+<p>Открытие нового парламента 6 ноября прошло скандально. Депутаты HEP (Народная трудовая партия, курдская) пришли в парламент с желто-красно-зелёными шейными платками — цвета курдского флага. Депутат Дийярбакыра от SHP Хатип Дичле при принятии присяги сказал вслух то, что хотел: «Читаю текст присяги под конституционным давлением». Депутат Лейла Зана после принесения присяги выкрикнула лозунг по-курдски. Зал взорвался. Этот день войдёт в историю как начало долгого и болезненного разрыва между курдским политическим представительством и официальной Анкарой.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="дев-сол-в-1991-м">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">Дев-Сол в 1991-м</h2>
+  </div>
+  <p class="phenom-lede">Активность «Дев-Сол» не снижалась. 26 января взрывы прогремели у американского консульства в Адане и Турецко-американского культурного центра — организация взяла ответственность. 23 мая в Анкаре убит генерал-майор в отставке Исмаил Селен, в Адане — командующий жандармским округом генерал-майор Темель Джингёз. 14 октября убит генерал-лейтенант в отставке Аднан Эрсёз, бывший начальник МИТ.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Логика мишеней читалась ясно: армия, спецслужбы, американское присутствие. Война в Заливе дала новое идеологическое топливо — антиимпериализм из абстрактного лозунга превратился в конкретную географию бомбардировок с турецкой территории. 30 октября из тюрьмы Бинголь сбежали двое членов «Дев-Сол» — Лютфю Топал и Ибрагим Бинголь. Государственная машина не успевала перекрывать дыры.</p>
+<p>При этом ответственность за многие громкие убийства года — Муаммера Аксоя (январь 1990), Чётина Эмеча (март 1990) — так и не была установлена официально. «Неизвестные», «предположительно», «расследование продолжается» — стандартные формулировки турецкой прессы начала девяностых. Атмосфера безнаказанности работала в обе стороны: она давала ощущение вседозволенности тем, кто стрелял, и ощущение беззащитности тем, кто писал, говорил или руководил.</p>
+<p class="ref-note">см. «Дев-Сол», 1990</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="метин-октай">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">Метин Октай</h2>
+  </div>
+  <p class="phenom-lede">13 сентября 1991 года в автомобильной аварии погиб Метин Октай. Ему было 53 года. Это было не просто смерть знаменитого футболиста — это был уход живого символа.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Метин Октай провёл за «Галатасарай» двенадцать сезонов — с 1955 по 1969 год. За это время он забил 423 гола в официальных матчах и стал лучшим бомбардиром в истории клуба на долгие десятилетия. Его прозвище было «Танrı Dağı Kartalı» — «Орёл Тянь-Шаня». Он был азербайджанского происхождения, из Газиантепа, и стал первым турецким футболистом, признанным в Европе: в 1958–1965 годах он выступал за «Интернационале» в Италии и был включён в символическую сборную Европы.</p>
+<p>В 1991-м его гибель прошла через всю страну как удар. Он был из того поколения, которое помнили не по статистике, а по ощущению — как играл, как выглядел на поле, что значило видеть его на трибуне. Турецкий футбол умел хоронить своих героев с настоящей коллективной скорбью.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="футбол">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">Футбол</h2>
+  </div>
+  <p class="phenom-lede">Бешикташ выиграл чемпионство третий год подряд. Это не просто рекорд — это была dynasty в турецком смысле слова: команда, которую невозможно было остановить.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Сезон 1990/91 «Бешикташ» провёл с колоссальным отрывом. 20 побед, 9 ничьих, всего одно поражение. 63 забитых гола, 24 пропущенных. Разница в очках от второго места («Галатасарай», 64 очка) — пять пунктов. Английский тренер Гордон Милн руководил клубом уже третий сезон и выиграл с ним три подряд титула. Такого не было никогда — ни до, ни после.</p>
+<p>Лучшим бомбардиром лиги стал Таню Чолак с 31 голом — но играл он уже за «Галатасарай». Тот самый Чолак, который вёл «Галатасарай» в европейские полуфиналы и бил рекорды, теперь забивал за другой клуб. Трансфер прошёл тихо, но символически был громким: лучший бомбардир страны ушёл из «Гала» — и «Гала» всё равно финишировала второй.</p>
+<p>В еврокубках «Бешикташ» как действующий чемпион вышел в Кубок чемпионов, но был остановлен в первом раунде — шведским «Мальмё». Турецкий футбол ещё не научился конвертировать внутренние успехи в европейские результаты. Это придёт позже.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="тургут-озал-и-курдский-вопрос">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">ТУРГУТ ОЗАЛ И КУРДСКИЙ ВОПРОС</h2>
+  </div>
+  <p class="phenom-lede">1991-й — год, когда Озал впервые публично произносит слово «курды» без эвфемизмов. Президент говорит о необходимости политического решения. Это революция в риторике: десятилетиями официальный Анкара отрицала само существование курдской идентичности.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>С 1984 года ПКК вёл вооружённую борьбу на юго-востоке. Тысячи погибших с обеих сторон, деревни эвакуированы, чрезвычайное положение в нескольких провинциях. Государство отвечало силой — и только силой.</p>
+<p>Озал попробовал другой язык. Он признал, что у курдов есть идентичность, культура, язык. Это не стало политикой — военные и парламент сопротивлялись. Но слово было произнесено вслух, с трибуны президентского дворца. Откат занял годы, но прецедент остался.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="частное-телевидение-взрывается">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">ЧАСТНОЕ ТЕЛЕВИДЕНИЕ ВЗРЫВАЕТСЯ</h2>
+  </div>
+  <p class="phenom-lede">1991-й — год, когда частное ТВ в Турции перестаёт быть экспериментом и становится индустрией. Помимо Star 1, работавшего с 1989-го, в эфир выходят Show TV, HBB, Kanal 6. Конкуренция за рейтинг меняет всё: скорость, скандал, зрелище.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>TRT потерял монополию. Новые каналы ставили всё, что TRT никогда бы не поставил: жёсткие новости, ток-шоу без сценария, западные фильмы без цензуры, музыкальные клипы круглосуточно.</p>
+<p>Рейтинговые войны начались немедленно. Каналы переманивали ведущих, копировали форматы, опускали планку. Телевизор стал работать по-другому — быстрее, громче, без пауз.</p>
+<p>К середине 1990-х в Турции будет несколько сотен телеканалов — больше, чем в любой сопоставимой стране. Качество большинства из них не выдержало бы критики. Но для зрителя, выросшего на одном скучном TRT — это было освобождением.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="несчастный-случай-в-шырнаке">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">НЕСЧАСТНЫЙ СЛУЧАЙ В ШЫРНАКЕ</h2>
+  </div>
+  <p class="phenom-lede">Август 1991 года: в Шырнаке (провинция, граничащая с Ираком и Сирией) после нападения ПКК на жандармский пост армия открывает ответный огонь. Гибнут мирные жители. Факты расходятся: военные говорят о боевиках, правозащитники — о мирных. Это становится паттерном десятилетия.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Шырнак 1991-го — не единственный инцидент. Но он один из первых, попавших в большую прессу с правозащитными комментариями. ИХД (Ассоциация прав человека) публикует доклад. Cumhuriyet пишет о расхождениях версий.</p>
+<p>Война на юго-востоке к 1991-му унесла тысячи жизней. Государство отчитывалось о «нейтрализованных террористах». Правозащитники считали гражданские потери. Разрыв между официальными данными и независимыми оценками становился всё шире.</p>
+<p>Этот разрыв — одна из главных травм 1990-х. Страна видела войну по-разному в зависимости от того, из какого источника она её узнавала.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="супермаркет-против-бакалейщика">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">СУПЕРМАРКЕТ ПРОТИВ БАКАЛЕЙЩИКА</h2>
+  </div>
+  <p class="phenom-lede">1991-й: в Турции работают уже сотни супермаркетов — Migros, Gima, Tansaş, местные сети. Квартальный бакалейщик — «bakkal» — не исчезает, но сдаёт позиции. Это не просто экономика: меняется социальная ткань квартала.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Bakkal был больше, чем магазин. Он давал в долг до зарплаты — записывал в тетрадь. Знал, у кого заболела мать и кто вернулся из армии. Держал детей под присмотром, пока мамы разговаривали у прилавка. Это была живая нода квартальной сети.</p>
+<p>Супермаркет ничего этого не умел. Зато там был выбор, цены ниже, кондиционер. Городские жители голосовали ногами — шли в Migros.</p>
+<p>Bakkal не умер: в конце 1990-х их ещё около 200 000 по стране. Но их роль изменилась навсегда. Из центра квартальной жизни — в сервисную точку для тех, кому лень ехать в супермаркет.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="тарихи-яримада-стамбул-в-юнеско">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">ТАРИХИ ЯРИМАДА: СТАМБУЛ В ЮНЕСКО</h2>
+  </div>
+  <p class="phenom-lede">В декабре 1985 года исторический центр Стамбула внесён в список Всемирного наследия ЮНЕСКО. К 1991 году это решение начинает работать практически: реставрации, туристический поток, первые споры о том, что охранять, а что сносить.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>ЮНЕСКО признало четыре зоны: Старый город (Султанахмет), стены Феодосия, Зейрек (церковь Пантократора) и Сюлеймание. Это была не просто почётная грамота — это обязательства и деньги.</p>
+<p>К 1991-му туризм в Стамбуле рос: Айя-София, Голубая мечеть, Гранд-базар. Иностранцы открывали для себя город. Турки, выросшие рядом с этими местами, смотрели на них иначе — сквозь глаза туристов начинали видеть заново.</p>
+<p>Реставрация шла медленно и не всегда правильно. Но разговор о том, как обращаться с наследием, начался — и не заканчивается до сих пор.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="özal-и-смерть-предчувствие">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">ÖZAL И СМЕРТЬ (ПРЕДЧУВСТВИЕ)</h2>
+  </div>
+  <p class="phenom-lede">1991 год: Тургут Озал — президент с 1989-го — активно вмешивается в политику, нарушая конституционные нормы. Его здоровье ухудшается. Покушение 1988-го прошло без последствий, но Озал изменился — стал торопиться. В апреле 1993-го он умрёт внезапно; 1991-й — год, когда это будущее уже ощущается.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Озал в 1991-м — президент с огромными личными амбициями и слабеющим здоровьем. Он хотел изменить конституцию, чтобы усилить президентские полномочия. Хотел лично вести переговоры по курдскому вопросу. Хотел выйти на международную арену после войны в Заливе.</p>
+<p>Всё это столкнулось с сопротивлением военных, парламента, собственной партии, которую он давно не контролировал. 1991-й — год разрыва между масштабом замыслов и реальностью власти.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="барыш-манчо-7ден-77е">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">БАРЫШ МАНЧО: «7&#x27;ДЕН 77&#x27;Е»</h2>
+  </div>
+  <p class="phenom-lede">С 1988 года по воскресным утрам Барыш Манчо ведёт на TRT программу «Barış Manço ile 7&#x27;den 77&#x27;ye». Он объездил 140 стран, привёз домой мир — и рассказывает его детям и взрослым одновременно. К 1991-му это самая популярная детская программа в стране. 378 выпусков за 10 лет.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>Манчо 15 лет убеждал TRT принять формат. Наконец согласились — и дали 15 дней на первый выпуск. Формат: путешествия по миру, разговоры с детьми, уважение к старикам, Турция от холма до холма.</p>
+<p>Программа была революционной не по содержанию, а по тону: Манчо говорил с детьми как с равными. Не учил — разговаривал. На фоне советского TRT с дикторами в пиджаках это звучало иначе.</p>
+<p>«7&#x27;den 77&#x27;ye» шёл до 1998-го. Манчо умер в феврале 1999-го — через несколько недель после последнего выпуска. Совпадение, которое казалось невозможным.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+<div class="phenomenon" id="чекич-гюч-иностранцы-на-нашей-земле">
+  <div>
+    <div class="pill-label">1991</div>
+    <h2 class="phenom-title">ЧЕКИЧ ГЮЧ: ИНОСТРАНЦЫ НА НАШЕЙ ЗЕМЛЕ</h2>
+  </div>
+  <p class="phenom-lede">С апреля 1991 года на базе Инджирлик и у иракской границы стоят международные силы операции Provide Comfort — американцы, британцы, французцы. Официально — для защиты иракских курдов. В Турции их называют «Çekiç Güç» — «Молот». Каждый год парламент голосует за продление мандата — и каждый раз это политический кризис.</p>
+  <div class="fallback-box"><div class="fallback-title">Архивное фото</div><div class="fallback-subtitle">Место для исторической фотографии</div></div>
+  <div class="phenom-body-text">
+    <p>500 000 иракских курдов бежали к турецкой границе после подавления восстания Саддамом. Турция сначала закрыла границу — потом открыла под международным давлением. Разместила беженцев в палаточных лагерях вдоль границы.</p>
+<p>«Çekiç Güç» давал международную защиту буферной зоне в Северном Ираке. Для турецких военных это было неудобно: рядом с зоной операций ПКК — иностранные наблюдатели. Для оппозиции — нарушение суверенитета. Для правительства — необходимая цена за стабильность.</p>
+<div class="chronicle-grid"></div>
+  </div>
+  
+</div>
+
+  
+<section class="chronicle">
+  <h2>Хронология 1991</h2>
+  <div class="chronicle-grid"><div class="chron-month">Январь</div><div class="chronicle-item"><span>—</span><span>17 янв — С базы Инджирлик взлетели американские самолёты и начали бомбардировку Ирака. Война в Заливе стала реальной для Турции.</span></div><div class="chronicle-item"><span>—</span><span>21 янв — В ряде турецких городов развёрнуты ракеты Patriot против возможных иракских ударов.</span></div><div class="chronicle-item"><span>—</span><span>25 янв — Закон №2932, запрещавший говорить, петь и записывать музыку по-курдски, отменён.</span></div><div class="chronicle-item"><span>—</span><span>26 янв — Взрывы у американского консульства в Адане и турецко-американского культурного центра; ответственность взял «Дев-Сол».</span></div><div class="chronicle-item"><span>—</span><span>26 янв — Убит корнет армии в отставке, профсоюзный деятель Мустафа Инджи («Дев-Сол»).</span></div><div class="chronicle-item"><span>—</span><span>27 янв — Скончался историк, профессор Тарык Зафер Тунайя.</span></div><div class="chronicle-item"><span>—</span><span>30 янв — Убит корнет армии в отставке Хулуси Сайын, бывший главный военный советник при правительстве («Дев-Сол»).</span></div><div class="chronicle-item"><span>—</span><span>25 янв — Подписано коллективное трудовое соглашение по металлургии (МЕСС — Türk-Metal): 85 000 рабочих, зарплата повышена.</span></div><div class="chronicle-item"><span>—</span><span>25 янв — Совет министров заморозил все забастовки на 60 дней, сославшись на войну в Заливе.</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Февраль</div><div class="chronicle-item"><span>—</span><span>6 фев — Подписано соглашение с зонгулдакскими горняками: 49 905 лир вместо требуемых 98 000. Марш завершён.</span></div><div class="chronicle-item"><span>—</span><span>27 фев — Осуждён Кемаль Хорзум, приговорён к 10 годам тюрьмы.</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Март</div><div class="chronicle-item"><span>—</span><span>18 мар — Пешмерги, спасаясь от армии Саддама, начали переходить турецкую границу.</span></div><div class="chronicle-item"><span>—</span><span>26 мар — Убит профсоюзный деятель металлургов Мустафа Инджи.</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Апрель</div><div class="chronicle-item"><span>—</span><span>7 апр — Убит отставной генерал-майор Мемдух Юнлютюрк («Дев-Сол»).</span></div><div class="chronicle-item"><span>—</span><span>8 апр — Число иракских пешмергов в Турции превысило 300 000.</span></div><div class="chronicle-item"><span>—</span><span>11 апр — Принят спорный «Закон о борьбе с терроризмом».</span></div><div class="chronicle-item"><span>—</span><span>28 апр — В районе Солхан провинции Бинголь боевики ПКК напали на дом учителя; убиты каймакам Метин Атеш, прокурор Мехмет Тюркзевер и лесник Ахмет Йенер.</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Май</div><div class="chronicle-item"><span>—</span><span>23 мая — «Дев-Сол» берёт ответственность за убийства: в Анкаре — генерал-майор в отставке Исмаил Селен, в Адане — генерал-майор Темель Джингёз.</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Июнь</div><div class="chronicle-item"><span>—</span><span>15 июн — На 3-м конгрессе АНАП Месут Йылмаз избран председателем партии.</span></div><div class="chronicle-item"><span>—</span><span>16 июн — Премьер Акбулут подал в отставку.</span></div><div class="chronicle-item"><span>—</span><span>5 июл — Кабинет Месута Йылмаза получил вотум доверия ВНСТ.</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Июль</div><div class="chronicle-item"><span>—</span><span>7 сен — Бартын стал отдельной провинцией.</span></div><div class="chronicle-item"><span>—</span><span>10 июл — В Дийярбакыре во время похорон Ведата Айдына, провинциального председателя HEP, беспорядки: трое погибших.</span></div><div class="chronicle-item"><span>—</span><span>11 июл — На 11-х Средиземноморских играх Али Эроглу и Сунай Булут выиграли медали по тяжёлой атлетике, затем дисквалифицированы за допинг.</span></div><div class="chronicle-item"><span>—</span><span>19 июл — Президент США Джордж Буш прибыл в Турцию с государственным визитом.</span></div><div class="chronicle-item"><span>—</span><span>22 июл — Конституционный суд постановил ликвидировать Объединённую коммунистическую партию Турции (TBKP).</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Сентябрь</div><div class="chronicle-item"><span>—</span><span>8 сен — TRT расследовало программу «32-й день» Мехмета Бирана: установлено «бытовое мошенничество», Биранду предписано выплатить около 1 млрд лир.</span></div><div class="chronicle-item"><span>—</span><span>13 сен — В автокатастрофе погиб Метин Октай — легендарный нападающий «Галатасарая» и «Интернационале».</span></div><div class="chronicle-item"><span>—</span><span>24 сен — RP (Партия благоденствия), IDP и MÇP договорились участвовать в выборах единым списком.</span></div><div class="chronicle-item"><span>—</span><span>29 сен — Начало строительства Стамбульского метрополитена.</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Октябрь</div><div class="chronicle-item"><span>—</span><span>14 окт — Убит генерал-лейтенант в отставке, бывший начальник МИТ Аднан Эрсёз («Дев-Сол»).</span></div><div class="chronicle-item"><span>—</span><span>20 окт — Досрочные парламентские выборы. DYP — 178 мест, АНАП — 115, SHP — 88, RP — 62, DSP — 7.</span></div><div class="chronicle-item"><span>—</span><span>30 окт — Из тюрьмы Бинголь сбежали двое бойцов «Дев-Сол».</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Ноябрь</div><div class="chronicle-item"><span>—</span><span>6 ноя — ВНСТ 19-го созыва открылось: депутаты HEP с жёлто-красно-зелёными платками, клятвенный скандал с Хатипом Дичле и Лейлой Зана.</span></div><div class="chronicle-item"><span>—</span><span>11 ноя — Демирель (DYP) и Инёню (SHP) договорились о коалиции.</span></div><div class="chronicle-item"><span>—</span><span>12 ноя — В оборот введены банкноты в 100 000 лир и монеты в 2 500 лир.</span></div><div class="chronicle-item"><span>—</span><span>15 ноя — 28-й Анталийский кинофестиваль: лучший фильм — «Скрытое лицо» (Gizli Yüz) Омера Кавура.</span></div><div class="chronicle-item"><span>—</span><span>16 ноя — Хусаметтин Джиндоруку, заместитель председателя DYP, избран спикером ВНСТ.</span></div><div class="chronicle-item"><span>—</span><span>20 ноя — Сформирован Седьмой кабинет Демиреля: коалиция DYP–SHP.</span></div></div>
+<div class="chronicle-grid"><div class="chron-month">Декабрь</div><div class="chronicle-item"><span>—</span><span>30 дек — Взрыв у анкарского представительства газеты Hürriyet.</span></div></div>
+<div class="chronicle-grid"></div>
+</section>
+  
+<section class="symbols-section">
+  <div class="symbols-title">Символы 1991 года</div>
+  <div class="symbols-grid">
+    <div class="symbol-item"><div class="symbol-name">Шахтёрский марш</div><div class="symbol-desc">80 000 человек, идущих пешком на Анкару. Не против государства — к государству, с требованием быть услышанными. В год, когда везде говорили о войне, рынке и курдах, этот марш напомнил, что есть ещё и труд — и тот, кто его производит.</div></div>
+<div class="symbol-item"><div class="symbol-name">Беженцы на горных перевалах</div><div class="symbol-desc">Фотографии марта–апреля: колонны людей по горным дорогам, дети на руках, скот рядом. Триста тысяч человек пришли из Ирака не по плану, не по соглашению — просто потому что им некуда было идти. Турция приняла — не из гуманизма, а из географии.</div></div>
+<div class="symbol-item"><div class="symbol-name">Лейла Зана</div><div class="symbol-desc">Женщина-депутат, которая в момент принятия присяги выкрикнула курдский лозунг. Зал взорвался. Страна разделилась. Это не была риторика — это был жест, который потом аукнется судебным процессом и годами в тюрьме.</div></div>
+<div class="symbol-item"><div class="symbol-name">Метин Октай</div><div class="symbol-desc">Ушёл в сентябре. «Орёл Тянь-Шаня» — первый турок, которого знала Европа по имени, до того как Турция вообще начала думать о европейском футболе всерьёз. Его смерть была потерей эпохи, а не просто человека.</div></div>
+<div class="symbol-item"><div class="symbol-name">Таню Чолак — 31 гол</div><div class="symbol-desc">Лучший бомбардир лиги. Феноменальный сезон — и при этом его клуб («Галатасарай») всё равно остался вторым. Так бывает, когда Бешикташ Гордона Милна непобедим.</div></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© Намедни по-турецки · <a href="index.html">Все годы</a></p>
+</footer>
+
+</body>
+</html>
