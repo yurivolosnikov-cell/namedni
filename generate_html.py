@@ -6,7 +6,8 @@ Reproduces the burgundy notebook style from existing pages.
 import re, html, os, sys
 from pathlib import Path
 
-BASE = Path("/sessions/gracious-exciting-archimedes/mnt/namedni")
+BASE = Path(__file__).resolve().parent
+OUT = Path(os.environ.get("NAMEDNI_OUT", BASE))
 
 # Key events per year for header subtitle
 SUBTITLES = {
@@ -412,13 +413,13 @@ def generate_year(year):
 </body>
 </html>'''
     
-    out = BASE / f"{year}.html"
+    out = OUT / f"{year}.html"
     with open(out, 'w') as f:
         f.write(page)
     return len(main_arts)
 
 # Generate all years
-years = [str(y) for y in range(1980, 1992)]
+years = sys.argv[1:] or [str(y) for y in range(1980, 1992)]
 for year in years:
     count = generate_year(year)
     print(f"  {year}.html — {count} феноменов")
