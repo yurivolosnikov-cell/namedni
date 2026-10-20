@@ -1,7 +1,7 @@
-_tmp_ocr/
 .DS_Store
+_tmp/
 *.pdf
-1923-1950/
-Galleria 1988/
-Gazette about Galleria/
-Страницы из книги по истории/
+*.bundle
+# сырые сканы держим в ../namedni_источники
+*.JPG
+*.HEIC
