@@ -94,7 +94,6 @@ BODY = '\n'.join(out)
 CSS = open('style.css').read()
 HEAD = '<title>Намедни. 1985</title>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans+Condensed:wght@400;600&display=swap">\n'
 page = HEAD + f'<style>{CSS}</style>\n<div class="wrap">\n{BODY}\n</div>\n'
-open('artifact_1985.html', 'w').write(page)
 full = '<!doctype html>\n<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n' + HEAD + f'<style>{CSS}</style></head>\n<body><div class="wrap">\n{BODY}\n</div></body></html>\n'
 open('1985_pilot.html', 'w').write(full)
 print(len(arts), 'spreads')
